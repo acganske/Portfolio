@@ -11,10 +11,10 @@ const Projects: React.FC = () => {
       description: 'A full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration. Features a modern UI with responsive design.',
       image: '/api/placeholder/400/250',
       technologies: [
-        { name: 'React', icon: FaReact },
-        { name: 'TypeScript', icon: SiTypescript },
-        { name: 'Node.js', icon: FaNodeJs },
-        { name: 'MongoDB', icon: SiMongodb }
+        { name: 'React', icon: FaReact as React.ComponentType },
+        { name: 'TypeScript', icon: SiTypescript as React.ComponentType },
+        { name: 'Node.js', icon: FaNodeJs as React.ComponentType },
+        { name: 'MongoDB', icon: SiMongodb as React.ComponentType }
       ],
       githubUrl: 'https://github.com/abrahamganske/ecommerce-platform',
       liveUrl: 'https://ecommerce-demo.abrahamganske.com',
@@ -25,9 +25,9 @@ const Projects: React.FC = () => {
       description: 'A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.',
       image: '/api/placeholder/400/250',
       technologies: [
-        { name: 'React', icon: FaReact },
-        { name: 'Node.js', icon: FaNodeJs },
-        { name: 'Tailwind', icon: SiTailwindcss }
+        { name: 'React', icon: FaReact as React.ComponentType },
+        { name: 'Node.js', icon: FaNodeJs as React.ComponentType },
+        { name: 'Tailwind', icon: SiTailwindcss as React.ComponentType }
       ],
       githubUrl: 'https://github.com/abrahamganske/task-manager',
       liveUrl: 'https://tasks.abrahamganske.com',
@@ -38,9 +38,9 @@ const Projects: React.FC = () => {
       description: 'A responsive weather application that provides current weather conditions, forecasts, and historical data with interactive charts and maps.',
       image: '/api/placeholder/400/250',
       technologies: [
-        { name: 'React', icon: <FaReact /> },
-        { name: 'TypeScript', icon: <SiTypescript /> },
-        { name: 'Tailwind', icon: <SiTailwindcss /> }
+        { name: 'React', icon: FaReact as React.ComponentType },
+        { name: 'TypeScript', icon: SiTypescript as React.ComponentType },
+        { name: 'Tailwind', icon: SiTailwindcss as React.ComponentType }
       ],
       githubUrl: 'https://github.com/abrahamganske/weather-dashboard',
       liveUrl: 'https://weather.abrahamganske.com',
@@ -51,8 +51,8 @@ const Projects: React.FC = () => {
       description: 'A Python-based data analysis tool with visualization capabilities for processing and analyzing large datasets with machine learning insights.',
       image: '/api/placeholder/400/250',
       technologies: [
-        { name: 'Python', icon: <FaPython /> },
-        { name: 'React', icon: <FaReact /> }
+        { name: 'Python', icon: FaPython as React.ComponentType },
+        { name: 'React', icon: FaReact as React.ComponentType }
       ],
       githubUrl: 'https://github.com/abrahamganske/data-analyzer',
       liveUrl: null,
@@ -98,14 +98,14 @@ const Projects: React.FC = () => {
                       <FaGithub />
                     </a>
                     {project.liveUrl && (
-                      <a 
-                        href={project.liveUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="project-link"
-                      >
-                        <FaExternalLinkAlt />
-                      </a>
+                                                                      <a 
+                          href={project.liveUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="project-link"
+                        >
+                          <FaExternalLinkAlt />
+                        </a>
                     )}
                   </div>
                 </div>

@@ -25,32 +25,32 @@ const Skills: React.FC = () => {
   const skillCategories = [
     {
       title: 'Frontend Development',
-      skills: [
-        { name: 'React', icon: <FaReact />, level: 85 },
-        { name: 'TypeScript', icon: <SiTypescript />, level: 80 },
-        { name: 'JavaScript', icon: <FaJs />, level: 90 },
-        { name: 'HTML5', icon: <FaHtml5 />, level: 95 },
-        { name: 'CSS3', icon: <FaCss3Alt />, level: 90 },
-        { name: 'Tailwind CSS', icon: <SiTailwindcss />, level: 75 },
-        { name: 'Redux', icon: <SiRedux />, level: 70 }
+              skills: [
+        { name: 'React', icon: FaReact as React.ComponentType, level: 85 },
+        { name: 'TypeScript', icon: SiTypescript as React.ComponentType, level: 80 },
+        { name: 'JavaScript', icon: FaJs as React.ComponentType, level: 90 },
+        { name: 'HTML5', icon: FaHtml5 as React.ComponentType, level: 95 },
+        { name: 'CSS3', icon: FaCss3Alt as React.ComponentType, level: 90 },
+        { name: 'Tailwind CSS', icon: SiTailwindcss as React.ComponentType, level: 75 },
+        { name: 'Redux', icon: SiRedux as React.ComponentType, level: 70 }
       ]
     },
     {
       title: 'Backend Development',
       skills: [
-        { name: 'Node.js', icon: <FaNodeJs />, level: 80 },
-        { name: 'Express.js', icon: <SiExpress />, level: 75 },
-        { name: 'Python', icon: <FaPython />, level: 85 },
-        { name: 'Java', icon: <FaJava />, level: 70 }
+        { name: 'Node.js', icon: FaNodeJs as React.ComponentType, level: 80 },
+        { name: 'Express.js', icon: SiExpress as React.ComponentType, level: 75 },
+        { name: 'Python', icon: FaPython as React.ComponentType, level: 85 },
+        { name: 'Java', icon: FaJava as React.ComponentType, level: 70 }
       ]
     },
     {
       title: 'Database & Tools',
       skills: [
-        { name: 'MongoDB', icon: <SiMongodb />, level: 75 },
-        { name: 'PostgreSQL', icon: <SiPostgresql />, level: 70 },
-        { name: 'SQL', icon: <FaDatabase />, level: 80 },
-        { name: 'Git', icon: <FaGitAlt />, level: 85 }
+        { name: 'MongoDB', icon: SiMongodb as React.ComponentType, level: 75 },
+        { name: 'PostgreSQL', icon: SiPostgresql as React.ComponentType, level: 70 },
+        { name: 'SQL', icon: FaDatabase as React.ComponentType, level: 80 },
+        { name: 'Git', icon: FaGitAlt as React.ComponentType, level: 85 }
       ]
     }
   ];
@@ -94,7 +94,7 @@ const Skills: React.FC = () => {
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <div className="skill-icon">{skill.icon}</div>
+                    <div className="skill-icon"><skill.icon /></div>
                     <div className="skill-info">
                       <h4>{skill.name}</h4>
                       <div className="skill-bar">
