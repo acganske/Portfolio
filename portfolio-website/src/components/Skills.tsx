@@ -22,35 +22,38 @@ import {
 import './Skills.css';
 
 const Skills: React.FC = () => {
-  const skillCategories = [
+  const skillCategories: Array<{
+    title: string;
+    skills: Array<{ name: string; icon: React.ComponentType; level: number }>;
+  }> = [
     {
       title: 'Frontend Development',
       skills: [
-        { name: 'React', icon: <FaReact />, level: 85 },
-        { name: 'TypeScript', icon: <SiTypescript />, level: 80 },
-        { name: 'JavaScript', icon: <FaJs />, level: 90 },
-        { name: 'HTML5', icon: <FaHtml5 />, level: 95 },
-        { name: 'CSS3', icon: <FaCss3Alt />, level: 90 },
-        { name: 'Tailwind CSS', icon: <SiTailwindcss />, level: 75 },
-        { name: 'Redux', icon: <SiRedux />, level: 70 }
+        { name: 'React', icon: FaReact, level: 85 },
+        { name: 'TypeScript', icon: SiTypescript, level: 80 },
+        { name: 'JavaScript', icon: FaJs, level: 90 },
+        { name: 'HTML5', icon: FaHtml5, level: 95 },
+        { name: 'CSS3', icon: FaCss3Alt, level: 90 },
+        { name: 'Tailwind CSS', icon: SiTailwindcss, level: 75 },
+        { name: 'Redux', icon: SiRedux, level: 70 }
       ]
     },
     {
       title: 'Backend Development',
       skills: [
-        { name: 'Node.js', icon: <FaNodeJs />, level: 80 },
-        { name: 'Express.js', icon: <SiExpress />, level: 75 },
-        { name: 'Python', icon: <FaPython />, level: 85 },
-        { name: 'Java', icon: <FaJava />, level: 70 }
+        { name: 'Node.js', icon: FaNodeJs, level: 80 },
+        { name: 'Express.js', icon: SiExpress, level: 75 },
+        { name: 'Python', icon: FaPython, level: 85 },
+        { name: 'Java', icon: FaJava, level: 70 }
       ]
     },
     {
       title: 'Database & Tools',
       skills: [
-        { name: 'MongoDB', icon: <SiMongodb />, level: 75 },
-        { name: 'PostgreSQL', icon: <SiPostgresql />, level: 70 },
-        { name: 'SQL', icon: <FaDatabase />, level: 80 },
-        { name: 'Git', icon: <FaGitAlt />, level: 85 }
+        { name: 'MongoDB', icon: SiMongodb, level: 75 },
+        { name: 'PostgreSQL', icon: SiPostgresql, level: 70 },
+        { name: 'SQL', icon: FaDatabase, level: 80 },
+        { name: 'Git', icon: FaGitAlt, level: 85 }
       ]
     }
   ];

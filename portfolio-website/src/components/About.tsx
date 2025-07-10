@@ -27,7 +27,7 @@ const About: React.FC = () => {
     }
   ];
 
-  const getIcon = (iconType: string) => {
+  const getIcon = (iconType: string): React.ReactElement => {
     switch (iconType) {
       case 'code':
         return <FaCode />;

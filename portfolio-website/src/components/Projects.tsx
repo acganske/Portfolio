@@ -5,7 +5,15 @@ import { SiTypescript, SiMongodb, SiTailwindcss } from 'react-icons/si';
 import './Projects.css';
 
 const Projects: React.FC = () => {
-  const projects = [
+  const projects: Array<{
+    title: string;
+    description: string;
+    image: string;
+    technologies: Array<{ name: string; icon: React.ComponentType }>;
+    githubUrl: string;
+    liveUrl: string | null;
+    featured: boolean;
+  }> = [
     {
       title: 'E-Commerce Platform',
       description: 'A full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration. Features a modern UI with responsive design.',
@@ -38,9 +46,9 @@ const Projects: React.FC = () => {
       description: 'A responsive weather application that provides current weather conditions, forecasts, and historical data with interactive charts and maps.',
       image: '/api/placeholder/400/250',
       technologies: [
-        { name: 'React', icon: <FaReact /> },
-        { name: 'TypeScript', icon: <SiTypescript /> },
-        { name: 'Tailwind', icon: <SiTailwindcss /> }
+        { name: 'React', icon: FaReact },
+        { name: 'TypeScript', icon: SiTypescript },
+        { name: 'Tailwind', icon: SiTailwindcss }
       ],
       githubUrl: 'https://github.com/abrahamganske/weather-dashboard',
       liveUrl: 'https://weather.abrahamganske.com',
@@ -51,8 +59,8 @@ const Projects: React.FC = () => {
       description: 'A Python-based data analysis tool with visualization capabilities for processing and analyzing large datasets with machine learning insights.',
       image: '/api/placeholder/400/250',
       technologies: [
-        { name: 'Python', icon: <FaPython /> },
-        { name: 'React', icon: <FaReact /> }
+        { name: 'Python', icon: FaPython },
+        { name: 'React', icon: FaReact }
       ],
       githubUrl: 'https://github.com/abrahamganske/data-analyzer',
       liveUrl: null,
