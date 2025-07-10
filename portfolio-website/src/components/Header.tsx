@@ -4,6 +4,8 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import './Header.css';
 
 const Header: React.FC = () => {
+
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 

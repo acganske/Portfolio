@@ -4,6 +4,8 @@ import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import './Experience.css';
 
 const Experience: React.FC = () => {
+
+
   const experiences = [
     {
       title: 'Frontend Developer Intern',

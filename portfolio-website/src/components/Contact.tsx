@@ -39,12 +39,7 @@ const Contact: React.FC = () => {
     }
   };
 
-  const contactInfo: Array<{
-    icon: React.ComponentType;
-    label: string;
-    value: string;
-    link: string | null;
-  }> = [
+  const contactInfo = [
     {
       icon: FaEnvelope,
       label: 'Email',
@@ -65,11 +60,7 @@ const Contact: React.FC = () => {
     }
   ];
 
-  const socialLinks: Array<{
-    icon: React.ComponentType;
-    label: string;
-    url: string;
-  }> = [
+  const socialLinks = [
     {
       icon: FaGithub,
       label: 'GitHub',

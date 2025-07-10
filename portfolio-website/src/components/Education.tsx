@@ -4,6 +4,8 @@ import { FaGraduationCap, FaCalendarAlt, FaMapMarkerAlt, FaAward, FaTrophy } fro
 import './Education.css';
 
 const Education: React.FC = () => {
+
+
   const education = [
     {
       degree: 'Bachelor of Science in Computer Science',

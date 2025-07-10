@@ -4,6 +4,8 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaHeart, FaArrowUp } from 
 import './Footer.css';
 
 const Footer: React.FC = () => {
+
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -26,22 +28,22 @@ const Footer: React.FC = () => {
 
   const socialLinks = [
     {
-      icon: FaGithub,
+      icon: FaGithub as React.ComponentType,
       url: 'https://github.com/abrahamganske',
       label: 'GitHub'
     },
     {
-      icon: FaLinkedin,
+      icon: FaLinkedin as React.ComponentType,
       url: 'https://linkedin.com/in/abrahamganske',
       label: 'LinkedIn'
     },
     {
-      icon: FaTwitter,
+      icon: FaTwitter as React.ComponentType,
       url: 'https://twitter.com/abrahamganske',
       label: 'Twitter'
     },
     {
-      icon: FaEnvelope,
+      icon: FaEnvelope as React.ComponentType,
       url: 'mailto:abraham@ganske.com',
       label: 'Email'
     }
@@ -141,15 +143,15 @@ const Footer: React.FC = () => {
               </p>
             </div>
             
-            <motion.button
-              className="back-to-top"
-              onClick={scrollToTop}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Back to top"
-            >
-              <FaArrowUp />
-            </motion.button>
+                                        <motion.button
+                className="back-to-top"
+                onClick={scrollToTop}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                aria-label="Back to top"
+              >
+                <FaArrowUp />
+              </motion.button>
           </motion.div>
         </div>
       </div>
