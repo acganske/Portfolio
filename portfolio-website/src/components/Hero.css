@@ -144,11 +144,11 @@
 }
 
 .code-keyword {
-  color: #7c3aed;
+  color: #c5050c;
 }
 
 .code-variable {
-  color: #06b6d4;
+  color: #000000;
 }
 
 .code-operator {
@@ -164,7 +164,7 @@
 }
 
 .code-method {
-  color: #3b82f6;
+  color: #9b0000;
 }
 
 .code-parentheses {
