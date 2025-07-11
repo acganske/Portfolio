@@ -47,15 +47,9 @@ const Contact: React.FC = () => {
       link: 'mailto:abraham@ganske.com'
     },
     {
-      icon: FaPhone,
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
-    },
-    {
       icon: FaMapMarkerAlt,
       label: 'Location',
-      value: 'City, State, USA',
+      value: 'United States',
       link: null
     }
   ];
