@@ -49,13 +49,13 @@ const Contact: React.FC = () => {
     {
       icon: FaPhone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+1 (262) 685-2741',
+      link: 'tel:+2626852741'
     },
     {
       icon: FaMapMarkerAlt,
       label: 'Location',
-      value: 'City, State, USA',
+      value: 'Madison and Milwaukee, WI',
       link: null
     }
   ];

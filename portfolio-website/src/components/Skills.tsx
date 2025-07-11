@@ -24,7 +24,7 @@ import './Skills.css';
 const Skills: React.FC = () => {
   const skillCategories = [
     {
-      title: 'Frontend Development',
+      title: '',
               skills: [
         { name: 'React', icon: FaReact as React.ComponentType, level: 85 },
         { name: 'TypeScript', icon: SiTypescript as React.ComponentType, level: 80 },
@@ -33,24 +33,6 @@ const Skills: React.FC = () => {
         { name: 'CSS3', icon: FaCss3Alt as React.ComponentType, level: 90 },
         { name: 'Tailwind CSS', icon: SiTailwindcss as React.ComponentType, level: 75 },
         { name: 'Redux', icon: SiRedux as React.ComponentType, level: 70 }
-      ]
-    },
-    {
-      title: 'Backend Development',
-      skills: [
-        { name: 'Node.js', icon: FaNodeJs as React.ComponentType, level: 80 },
-        { name: 'Express.js', icon: SiExpress as React.ComponentType, level: 75 },
-        { name: 'Python', icon: FaPython as React.ComponentType, level: 85 },
-        { name: 'Java', icon: FaJava as React.ComponentType, level: 70 }
-      ]
-    },
-    {
-      title: 'Database & Tools',
-      skills: [
-        { name: 'MongoDB', icon: SiMongodb as React.ComponentType, level: 75 },
-        { name: 'PostgreSQL', icon: SiPostgresql as React.ComponentType, level: 70 },
-        { name: 'SQL', icon: FaDatabase as React.ComponentType, level: 80 },
-        { name: 'Git', icon: FaGitAlt as React.ComponentType, level: 85 }
       ]
     }
   ];
@@ -66,7 +48,6 @@ const Skills: React.FC = () => {
           viewport={{ once: true }}
         >
           <h2>Skills & Technologies</h2>
-          <p>A comprehensive overview of my technical skills and expertise</p>
         </motion.div>
 
         <div className="skills-container">
@@ -79,7 +60,6 @@ const Skills: React.FC = () => {
               transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
               viewport={{ once: true }}
             >
-              <h3>{category.title}</h3>
               <div className="skills-grid">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
@@ -97,19 +77,7 @@ const Skills: React.FC = () => {
                     <div className="skill-icon"><skill.icon /></div>
                     <div className="skill-info">
                       <h4>{skill.name}</h4>
-                      <div className="skill-bar">
-                        <motion.div
-                          className="skill-progress"
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ 
-                            duration: 1, 
-                            delay: categoryIndex * 0.2 + skillIndex * 0.1 + 0.5 
-                          }}
-                          viewport={{ once: true }}
-                        />
-                      </div>
-                      <span className="skill-level">{skill.level}%</span>
+                        
                     </div>
                   </motion.div>
                 ))}

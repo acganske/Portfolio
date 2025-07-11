@@ -8,19 +8,21 @@ const Education: React.FC = () => {
 
   const education = [
     {
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'University Name',
-      location: 'City, State',
-      period: '2022 - 2026 (Expected)',
-      gpa: '3.8/4.0',
+      degree: 'Bachelor of Science in Computer Science and Data Science',
+      institution: 'University of Wisconsin Madison',
+      location: 'Madison, Wisconsin',
+      period: '2023 - 2027 (Expected)',
+      gpa: '3.54/4.0',
       description: 'Focused on software engineering, algorithms, and data structures. Active member of the Computer Science Student Association.',
       coursework: [
-        'Data Structures & Algorithms',
-        'Software Engineering',
-        'Database Systems',
-        'Computer Networks',
-        'Machine Learning',
-        'Web Development'
+        'Algorithms',
+        'Machine Organization and Programming',
+        'Data Science Programming',
+        'Statistics',
+        'Discrete Math', 
+        'Machine Learning (current)', 
+        'Linear Algebra (current)', 
+        'Mobile Systems and Applications (current)'
       ],
       achievements: [
         'Dean\'s List (4 semesters)',
@@ -69,16 +71,7 @@ const Education: React.FC = () => {
   return (
     <section id="education" className="education">
       <div className="container">
-        <motion.div
-          className="section-header"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2>Education & Certifications</h2>
-          <p>My academic background and continuous learning journey</p>
-        </motion.div>
+        
 
         <div className="education-content">
           {/* Academic Education */}
@@ -117,50 +110,11 @@ const Education: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="achievements">
-                  <h5><FaTrophy /> Achievements</h5>
-                  <ul>
-                    {edu.achievements.map((achievement, idx) => (
-                      <li key={idx}>{achievement}</li>
-                    ))}
-                  </ul>
-                </div>
+                
               </motion.div>
             ))}
           </motion.div>
-
-          {/* Certifications */}
-          <motion.div
-            className="certifications-section"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <h3><FaAward /> Certifications</h3>
-            <div className="certifications-grid">
-              {certifications.map((cert, index) => (
-                <motion.div
-                  key={index}
-                  className="certification-card"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="cert-icon">
-                    <FaAward />
-                  </div>
-                  <h4>{cert.name}</h4>
-                  <p className="cert-issuer">{cert.issuer}</p>
-                  <p className="cert-date">{cert.date}</p>
-                  <p className="cert-id">ID: {cert.credentialId}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
+                  
           {/* Extracurricular Activities */}
           <motion.div
             className="extracurriculars-section"

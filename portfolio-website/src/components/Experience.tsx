@@ -8,44 +8,32 @@ const Experience: React.FC = () => {
 
   const experiences = [
     {
-      title: 'Frontend Developer Intern',
-      company: 'TechStart Solutions',
-      location: 'Remote',
-      period: 'June 2024 - Present',
+      title: 'Software Developer Intern (year-round)',
+      company: 'Baird',
+      location: 'Milwaukee, WI (HYBRID)',
+      period: 'Map 2025 - Present',
       description: [
-        'Developed responsive web applications using React and TypeScript',
-        'Collaborated with design team to implement pixel-perfect UI components',
-        'Optimized application performance resulting in 30% faster load times',
-        'Participated in code reviews and agile development processes'
+        '------',
+        '------',
+        '------',
+        '------'
       ],
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Git']
+      technologies: ['C#', 'React', 'Agile','Services']
     },
     {
-      title: 'Computer Science Tutor',
-      company: 'University Learning Center',
-      location: 'Campus',
-      period: 'September 2023 - Present',
+      title: 'IT Intern (year-round)',
+      company: 'Kapco Metal Stamping',
+      location: 'Grafton, WI (HYBRID)',
+      period: 'May 2024 - May 2025',
       description: [
-        'Tutored undergraduate students in programming fundamentals and data structures',
-        'Helped students with assignments in Java, Python, and C++',
-        'Conducted group study sessions for exam preparation',
-        'Maintained a 95% student satisfaction rating'
+        '------',
+        '------',
+        '------',
+        '------'
       ],
-      technologies: ['Java', 'Python', 'C++', 'Data Structures']
-    },
-    {
-      title: 'Web Development Volunteer',
-      company: 'Local Non-Profit Organization',
-      location: 'City',
-      period: 'January 2023 - May 2023',
-      description: [
-        'Built and maintained the organization\'s website using modern web technologies',
-        'Implemented donation system and event management features',
-        'Trained staff on content management and website updates',
-        'Increased online donations by 40% through improved UX design'
-      ],
-      technologies: ['HTML', 'CSS', 'JavaScript', 'WordPress']
+      technologies: ['C#', 'Visual Basic', 'SQL', 'CSS']
     }
+    
   ];
 
   return (

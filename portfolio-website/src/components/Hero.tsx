@@ -26,17 +26,17 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Hi, I'm <span className="gradient-text">Abraham Ganske</span>
+             <span className="gradient-text">Abraham Ganske</span>
           </motion.h1>
           
-          <motion.h2
+          <motion.h3
             className="hero-subtitle"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Computer Science Student & Aspiring Software Developer
-          </motion.h2>
+            I'm a Junior @ UW-Madison majoring in <span className="gradient-text">COMPUTER SCIENCE</span> and <span className="gradient-text">DATA SCIENCE</span> with a minor in <span className="gradient-text">ASTRONOMY</span>
+          </motion.h3>
           
           <motion.p
             className="hero-description"
@@ -44,9 +44,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Passionate about creating innovative solutions and building impactful software. 
-            Currently pursuing my degree in Computer Science while developing my skills in 
-            modern web technologies and software engineering practices.
+            
           </motion.p>
           
           <motion.div
@@ -55,46 +53,13 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <button
-              className="cta-button primary"
-              onClick={() => scrollToSection('projects')}
-            >
-              View My Work
-            </button>
             <button className="cta-button secondary">
               <FaDownload /> Download Resume
             </button>
           </motion.div>
           
-          <motion.div
-            className="social-links"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
-          >
-            <a
-              href="https://github.com/abrahamganske"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://linkedin.com/in/abrahamganske"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="mailto:abraham@ganske.com"
-              className="social-link"
-            >
-              <FaEnvelope />
-            </a>
-          </motion.div>
+          
+            
         </motion.div>
         
         <motion.div

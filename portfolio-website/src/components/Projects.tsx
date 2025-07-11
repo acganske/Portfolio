@@ -32,31 +32,6 @@ const Projects: React.FC = () => {
       githubUrl: 'https://github.com/abrahamganske/task-manager',
       liveUrl: 'https://tasks.abrahamganske.com',
       featured: true
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'A responsive weather application that provides current weather conditions, forecasts, and historical data with interactive charts and maps.',
-      image: '/api/placeholder/400/250',
-      technologies: [
-        { name: 'React', icon: FaReact as React.ComponentType },
-        { name: 'TypeScript', icon: SiTypescript as React.ComponentType },
-        { name: 'Tailwind', icon: SiTailwindcss as React.ComponentType }
-      ],
-      githubUrl: 'https://github.com/abrahamganske/weather-dashboard',
-      liveUrl: 'https://weather.abrahamganske.com',
-      featured: false
-    },
-    {
-      title: 'Data Analysis Tool',
-      description: 'A Python-based data analysis tool with visualization capabilities for processing and analyzing large datasets with machine learning insights.',
-      image: '/api/placeholder/400/250',
-      technologies: [
-        { name: 'Python', icon: FaPython as React.ComponentType },
-        { name: 'React', icon: FaReact as React.ComponentType }
-      ],
-      githubUrl: 'https://github.com/abrahamganske/data-analyzer',
-      liveUrl: null,
-      featured: false
     }
   ];
 
@@ -127,24 +102,6 @@ const Projects: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          className="projects-cta"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <p>Interested in seeing more of my work?</p>
-          <a 
-            href="https://github.com/abrahamganske" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="cta-button primary"
-          >
-            <FaGithub /> View All Projects on GitHub
-          </a>
-        </motion.div>
       </div>
     </section>
   );
