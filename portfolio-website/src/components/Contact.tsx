@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact: React.FC = () => {
@@ -26,13 +27,57 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      // Try EmailJS first if configured
+      const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_portfolio';
+      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_contact';
+      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+      
+      // Template params for EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        to_email: 'abeganske40@gmail.com',
+        subject: formData.subject,
+        message: formData.message,
+        reply_to: formData.email
+      };
+
+      // Check if EmailJS is properly configured
+      if (publicKey === 'YOUR_PUBLIC_KEY' || !publicKey || publicKey.length < 10) {
+        // Fallback to mailto if EmailJS is not configured
+        const mailtoSubject = encodeURIComponent(formData.subject);
+        const mailtoBody = encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        );
+        const mailtoLink = `mailto:abeganske40@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+        
+        window.open(mailtoLink, '_blank');
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        // Use EmailJS if properly configured
+        await emailjs.send(serviceId, templateId, templateParams, publicKey);
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      }
     } catch (error) {
-      setSubmitStatus('error');
+      console.error('Email sending failed:', error);
+      
+      // Fallback to mailto on error
+      try {
+        const mailtoSubject = encodeURIComponent(formData.subject);
+        const mailtoBody = encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        );
+        const mailtoLink = `mailto:abeganske40@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+        
+        window.open(mailtoLink, '_blank');
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } catch (mailtoError) {
+        setSubmitStatus('error');
+      }
     } finally {
       setIsSubmitting(false);
       setTimeout(() => setSubmitStatus('idle'), 5000);
@@ -229,7 +274,7 @@ const Contact: React.FC = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                 >
-                  Thank you! Your message has been sent successfully.
+                  Thank you! Your message has been prepared and will be sent to abeganske40@gmail.com.
                 </motion.div>
               )}
               
@@ -239,7 +284,7 @@ const Contact: React.FC = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                 >
-                  Sorry, there was an error sending your message. Please try again.
+                  Sorry, there was an error sending your message. Please try again or email directly to abeganske40@gmail.com.
                 </motion.div>
               )}
             </form>
