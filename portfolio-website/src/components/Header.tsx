@@ -29,9 +29,9 @@ const Header: React.FC = () => {
   const navItems = [
     { id: 'experience', label: 'Experience' },
     { id: 'education', label: 'Education' },
-    { id: 'contact', label: 'Contact' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' }
 
   ];
 

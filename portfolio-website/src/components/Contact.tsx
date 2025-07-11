@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
       icon: FaEnvelope,
       label: 'Email',
       value: 'abraham@ganske.com',
-      link: 'mailto:abraham@ganske.com'
+      link: 'mailto:abeganske40@gmail.com'
     },
     {
       icon: FaPhone,
@@ -101,10 +101,7 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
           >
             <h3>Let's Connect</h3>
-            <p>
-              Whether you have a project in mind, want to collaborate, or just want to say hello, 
-              I'm always open to new opportunities and conversations.
-            </p>
+            
 
             <div className="contact-details">
               {contactInfo.map((item, index) => (
@@ -172,7 +169,7 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    placeholder="Your Name"
+                    placeholder=""
                   />
                 </div>
                 
@@ -185,7 +182,7 @@ const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    placeholder="your.email@example.com"
+                    placeholder=""
                   />
                 </div>
               </div>
@@ -199,7 +196,7 @@ const Contact: React.FC = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  placeholder="What's this about?"
+                  placeholder=""
                 />
               </div>
               
@@ -212,7 +209,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  placeholder="Tell me about your project or just say hello!"
+                  placeholder="What's up ?"
                 />
               </div>
               
